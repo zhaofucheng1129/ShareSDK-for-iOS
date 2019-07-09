@@ -54,12 +54,13 @@ Pod::Spec.new do |s|
 
         # WeChatFull
         sp.subspec 'WeChatFull' do |ssp|
-            ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.a"
-            ssp.source_files = "ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.{h,m}"
+            # ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.a"
+            # ssp.source_files = "ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.{h,m}"
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WechatConnector.framework'
-            ssp.public_header_files = "ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.h"
+            # ssp.public_header_files = "ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.h"
             ssp.libraries = 'sqlite3'
             ssp.dependency 'mob_sharesdk/ShareSDK'
+            ssp.dependency 'MGPayFridge'
         end
 
         # RenRen
